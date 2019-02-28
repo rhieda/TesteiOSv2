@@ -14,7 +14,7 @@ protocol BankWorkerDataProtocol
 {
     var baseUrl : String {get set}
     func login(_ userLogin : UserLogin, completionHandler : @escaping (UserResponse) -> Void)
-    func getAccountBalance(_ userResponse : UserResponse, completionHandler : @escaping(AccountBalance) -> Void) -> Void
+    func getAccountBalance(_ id : Int, completionHandler : @escaping(AccountBalance) -> Void) -> Void
 }
 
 class BankAPIWorker: BankWorkerDataProtocol {
@@ -45,24 +45,21 @@ class BankAPIWorker: BankWorkerDataProtocol {
                 
                 case .failure(_): break
 
-            }
- 
+            } 
         }
     }
     
-    func getAccountBalance(_ userResponse: UserResponse, completionHandler: @escaping(AccountBalance) -> Void) -> Void
+    func getAccountBalance(_ id: Int, completionHandler: @escaping(AccountBalance) -> Void) -> Void
     {
         var balanceAccount : AccountBalance?
-        
-        if userResponse.error?.Success() == true
-        {
-            let url: String = baseUrl.description + "statements/\(String(describing: userResponse.userAccount?.userId))"
-            
-            Alamofire.request(url)
-                .responseObject {
-                    (dataResponse : DataResponse<AccountBalance>) in
-                    balanceAccount = dataResponse.result.value
-            }
+        let url: String = baseUrl.description + "statements/\(String(describing: id))"
+        Alamofire.request(url)
+            .responseObject {
+                (dataResponse : DataResponse<AccountBalance>) in
+                balanceAccount = dataResponse.result.value
+                if let account = balanceAccount {
+                    completionHandler(account)
+                }
         }
     }
     

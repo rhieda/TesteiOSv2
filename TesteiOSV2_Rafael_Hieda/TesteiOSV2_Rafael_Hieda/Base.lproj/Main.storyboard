@@ -58,7 +58,6 @@
                                 </state>
                                 <connections>
                                     <action selector="accountSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dt0-tB-Eaf"/>
-                                    <segue destination="lTh-fL-Aae" kind="show" identifier="ShowUserAccountBalance" id="N9e-uD-HwX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+            <point key="canvasLocation" x="-362" y="33"/>
         </scene>
         <!--User Account Balance View Controller-->
         <scene sceneID="20X-OE-ZeO">

@@ -14,13 +14,23 @@ import UIKit
 
 protocol UserAccountBalanceDisplayLogic: class
 {
-  func displaySomething(viewModel: UserAccountBalance.Something.ViewModel)
+    var vm : [Registry]? {get set}
+    func displayRegistries()
 }
 
-class UserAccountBalanceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserAccountBalanceDisplayLogic
-{
-  var interactor: UserAccountBalanceBusinessLogic?
-  var router: (NSObjectProtocol & UserAccountBalanceRoutingLogic & UserAccountBalanceDataPassing)?
+class UserAccountBalanceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserAccountBalanceDisplayLogic {
+    
+    var interactor: UserAccountBalanceBusinessLogic?
+    var userAccount : UserAccount?
+    var vm : [Registry]? = [Registry]()
+    
+    @IBOutlet weak var nameTextField: UILabel!
+    @IBOutlet weak var contaTextField: UILabel!
+    @IBOutlet weak var SaldoTextField: UILabel!
+    var accountBalance : AccountBalance?
+    
+    
+  @IBOutlet weak var tableView: UITableView!
 
   // MARK: Object lifecycle
   
@@ -38,31 +48,15 @@ class UserAccountBalanceViewController: UIViewController, UITableViewDataSource,
   
   // MARK: Setup
   
-  private func setup()
+  public func setup()
   {
     let viewController = self
     let interactor = UserAccountBalanceInteractor()
     let presenter = UserAccountBalancePresenter()
-    let router = UserAccountBalanceRouter()
     viewController.interactor = interactor
-    viewController.router = router
     interactor.presenter = presenter
     presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-    
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
-    }
+
   }
   
   // MARK: View lifecycle
@@ -70,50 +64,43 @@ class UserAccountBalanceViewController: UIViewController, UITableViewDataSource,
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
-    viewControllerSetup()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = UserAccountBalance.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: UserAccountBalance.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
+    loadRegistry()
+    userAccountCardSetup()
   }
     
-    //MARK : ViewController Events and outlets
-
-    @IBOutlet weak var tableView: UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewControllerSetup()
+        displayRegistries()
+    }
+    
+    //MARK : ViewController Events
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return (accountBalance?.statementList?.count)!
-        return 8
+        if let count = vm?.count {
+            return count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RegistryCell", for: indexPath) as! RegistryTableViewCell
         
-        
+        let registry = vm![indexPath.row]
 //        let registry : Registry = (accountBalance?.statementList![indexPath.row])!
         
-//        cell.dataTextField.text = registry.title
-//        cell.descricaoTextField.text = registry.description
-//        cell.dataTextField.text = registry.date
-//        cell.pagamentoTextField.text = "R$ \(String(describing: registry.value))"
+        cell.dataTextField.text = registry.title
+        cell.descricaoTextField.text = registry.description
+        cell.dataTextField.text = registry.date
+        guard let value = registry.value else {
+            return cell
+        }
+        cell.pagamentoTextField.text = String.valueToBRL(value: value)
         
-        cell.dataTextField.text = "20/10/2012"
-        cell.descricaoTextField.text = "Refeição"
-        cell.pagamentoTextField.text = "R$ 1.400,00"
-
         return cell
     }
     
@@ -121,22 +108,34 @@ class UserAccountBalanceViewController: UIViewController, UITableViewDataSource,
         return "Recentes"
     }
     
-    func viewControllerSetup()
-    {
+    func viewControllerSetup() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UINib.init(nibName: "RegistryCell", bundle:nil), forCellReuseIdentifier: "RegistryCell")
     }
     
-    @IBOutlet weak var nameTextField: UILabel!
-    @IBOutlet weak var contaTextField: UILabel!
-    @IBOutlet weak var SaldoTextField: UILabel!
-    public var userAccount : UserAccount?
-    var accountBalance : AccountBalance?
-    
-    func loadRegistry(accountBalance : AccountBalance)
-    {
-        self.accountBalance = accountBalance
+
+    func loadRegistry() {
+        if let id = userAccount?.userId {
+            self.interactor?.loadRegistry(id: id)
+        }
     }
     
+    func displayRegistries() {
+        tableView.reloadData()
+    }
+    
+    func userAccountCardSetup() {
+        if let name = userAccount?.name, let accountNumber = userAccount?.bankAccount, let balance = userAccount?.balance, let agency = userAccount?.agency {
+            nameTextField.text = name
+            contaTextField.text = "\(accountNumber) / \(agency)"
+            SaldoTextField.text = String.valueToBRL(value: balance)
+        }
+    }
+}
+
+fileprivate extension String {
+    static func valueToBRL(value : Double) -> String {
+       return String(format: "R$ %.02f", value)
+    }
 }

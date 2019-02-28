@@ -11,9 +11,6 @@
 		6836474E6D100AABABDE3BF5 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF7992077FAFB37DB6FEB0 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework */; };
 		CB3DF4B6F8B318CA0B2F85AE /* Pods_TesteiOSV2_Rafael_Hieda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502A6B6DA1B1C62A8822490F /* Pods_TesteiOSV2_Rafael_Hieda.framework */; };
 		E32FD3CA2187D58500C04054 /* UserAccountBalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C42187D58500C04054 /* UserAccountBalancePresenter.swift */; };
-		E32FD3CB2187D58500C04054 /* UserAccountBalanceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C52187D58500C04054 /* UserAccountBalanceWorker.swift */; };
-		E32FD3CC2187D58500C04054 /* UserAccountBalanceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C62187D58500C04054 /* UserAccountBalanceRouter.swift */; };
-		E32FD3CD2187D58500C04054 /* UserAccountBalanceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C72187D58500C04054 /* UserAccountBalanceModels.swift */; };
 		E32FD3CE2187D58500C04054 /* UserAccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C82187D58500C04054 /* UserAccountBalanceViewController.swift */; };
 		E32FD3CF2187D58500C04054 /* UserAccountBalanceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C92187D58500C04054 /* UserAccountBalanceInteractor.swift */; };
 		E330F90A2184B0C800CDEA48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330F9092184B0C800CDEA48 /* AppDelegate.swift */; };
@@ -36,7 +33,6 @@
 		E3D077B621865325001206FF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D077B021865324001206FF /* LoginPresenter.swift */; };
 		E3D077B721865325001206FF /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D077B121865324001206FF /* LoginWorker.swift */; };
 		E3D077B821865325001206FF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D077B221865324001206FF /* LoginRouter.swift */; };
-		E3D077B921865325001206FF /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D077B321865325001206FF /* LoginModels.swift */; };
 		E3D077BA21865325001206FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D077B421865325001206FF /* LoginViewController.swift */; };
 		E3D077BB21865325001206FF /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D077B521865325001206FF /* LoginInteractor.swift */; };
 		E3D077C32186B708001206FF /* RegistryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D077C22186B708001206FF /* RegistryCell.xib */; };
@@ -72,9 +68,6 @@
 		BF702B1BF33A16B416D38F48 /* Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_HiedaTests/Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2BF7992077FAFB37DB6FEB0 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesteiOSV2_Rafael_HiedaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32FD3C42187D58500C04054 /* UserAccountBalancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalancePresenter.swift; sourceTree = "<group>"; };
-		E32FD3C52187D58500C04054 /* UserAccountBalanceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceWorker.swift; sourceTree = "<group>"; };
-		E32FD3C62187D58500C04054 /* UserAccountBalanceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceRouter.swift; sourceTree = "<group>"; };
-		E32FD3C72187D58500C04054 /* UserAccountBalanceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceModels.swift; sourceTree = "<group>"; };
 		E32FD3C82187D58500C04054 /* UserAccountBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceViewController.swift; sourceTree = "<group>"; };
 		E32FD3C92187D58500C04054 /* UserAccountBalanceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceInteractor.swift; sourceTree = "<group>"; };
 		E330F9062184B0C800CDEA48 /* TesteiOSV2_Rafael_Hieda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteiOSV2_Rafael_Hieda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +96,6 @@
 		E3D077B021865324001206FF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = TesteiOSV2_Rafael_Hieda/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		E3D077B121865324001206FF /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginWorker.swift; path = TesteiOSV2_Rafael_Hieda/LoginWorker.swift; sourceTree = SOURCE_ROOT; };
 		E3D077B221865324001206FF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRouter.swift; path = TesteiOSV2_Rafael_Hieda/LoginRouter.swift; sourceTree = SOURCE_ROOT; };
-		E3D077B321865325001206FF /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginModels.swift; path = TesteiOSV2_Rafael_Hieda/LoginModels.swift; sourceTree = SOURCE_ROOT; };
 		E3D077B421865325001206FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = TesteiOSV2_Rafael_Hieda/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		E3D077B521865325001206FF /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginInteractor.swift; path = TesteiOSV2_Rafael_Hieda/LoginInteractor.swift; sourceTree = SOURCE_ROOT; };
 		E3D077BE21866FD0001206FF /* logout 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout 2.png"; sourceTree = "<group>"; };
@@ -275,9 +267,6 @@
 			children = (
 				E3D077C62186BF57001206FF /* Cell */,
 				E32FD3C42187D58500C04054 /* UserAccountBalancePresenter.swift */,
-				E32FD3C52187D58500C04054 /* UserAccountBalanceWorker.swift */,
-				E32FD3C62187D58500C04054 /* UserAccountBalanceRouter.swift */,
-				E32FD3C72187D58500C04054 /* UserAccountBalanceModels.swift */,
 				E32FD3C82187D58500C04054 /* UserAccountBalanceViewController.swift */,
 				E32FD3C92187D58500C04054 /* UserAccountBalanceInteractor.swift */,
 			);
@@ -289,7 +278,6 @@
 			children = (
 				E3D077B121865324001206FF /* LoginWorker.swift */,
 				E3D077B221865324001206FF /* LoginRouter.swift */,
-				E3D077B321865325001206FF /* LoginModels.swift */,
 				E3D077B421865325001206FF /* LoginViewController.swift */,
 				E3D077B021865324001206FF /* LoginPresenter.swift */,
 				E3D077B521865325001206FF /* LoginInteractor.swift */,
@@ -547,7 +535,6 @@
 				E3D077BA21865325001206FF /* LoginViewController.swift in Sources */,
 				E3D077BB21865325001206FF /* LoginInteractor.swift in Sources */,
 				E330F9512184EE9F00CDEA48 /* AccountBalance.swift in Sources */,
-				E32FD3CD2187D58500C04054 /* UserAccountBalanceModels.swift in Sources */,
 				E3D077C92186CF29001206FF /* CustomView.swift in Sources */,
 				E3D077B621865325001206FF /* LoginPresenter.swift in Sources */,
 				E330F90A2184B0C800CDEA48 /* AppDelegate.swift in Sources */,
@@ -555,11 +542,8 @@
 				E330F94F2184EC5700CDEA48 /* Registry.swift in Sources */,
 				E330F9432184D4DA00CDEA48 /* ResponseError.swift in Sources */,
 				E32FD3CE2187D58500C04054 /* UserAccountBalanceViewController.swift in Sources */,
-				E32FD3CC2187D58500C04054 /* UserAccountBalanceRouter.swift in Sources */,
-				E32FD3CB2187D58500C04054 /* UserAccountBalanceWorker.swift in Sources */,
 				E3D0778F218632C3001206FF /* BankAPIWorker.swift in Sources */,
 				E32FD3CF2187D58500C04054 /* UserAccountBalanceInteractor.swift in Sources */,
-				E3D077B921865325001206FF /* LoginModels.swift in Sources */,
 				E330F93F2184B73500CDEA48 /* UserLogin.swift in Sources */,
 				E330F9452184D6B700CDEA48 /* UserResponse.swift in Sources */,
 				E3D077B821865325001206FF /* LoginRouter.swift in Sources */,
@@ -743,7 +727,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2GEE43J5XT;
 				INFOPLIST_FILE = TesteiOSV2_Rafael_Hieda/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,7 +748,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2GEE43J5XT;
 				INFOPLIST_FILE = TesteiOSV2_Rafael_Hieda/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -785,6 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GEE43J5XT;
 				INFOPLIST_FILE = TesteiOSV2_Rafael_HiedaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -807,6 +792,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GEE43J5XT;
 				INFOPLIST_FILE = TesteiOSV2_Rafael_HiedaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,6 +814,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GEE43J5XT;
 				INFOPLIST_FILE = TesteiOSV2_Rafael_HiedaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -849,6 +836,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GEE43J5XT;
 				INFOPLIST_FILE = TesteiOSV2_Rafael_HiedaUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

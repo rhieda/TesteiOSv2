@@ -14,31 +14,19 @@ import UIKit
 
 protocol LoginBusinessLogic
 {
-  func doSomething(request: Login.Something.Request)
-    func login(_ user : UserLogin)
+  func login(_ user : UserLogin)
 }
 
 protocol LoginDataStore
 {
-  //var name: String { get set }
 }
 
-class LoginInteractor: LoginBusinessLogic, LoginDataStore
-{
+class LoginInteractor: LoginBusinessLogic, LoginDataStore {
   var presenter: LoginPresentationLogic?
   var worker: BankAPIWorker?
-  //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: Login.Something.Request)
-  {
-    worker = BankAPIWorker()
-    
-    
-    let response = Login.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
     
     func login(_ user: UserLogin) {
         var ur : UserResponse?

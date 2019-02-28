@@ -14,7 +14,6 @@ import UIKit
 
 protocol LoginDisplayLogic: class
 {
-  func displaySomething(viewModel: Login.Something.ViewModel)
   func storeUserResponseCredentials(viewModel: UserAccount)
   
 }
@@ -23,6 +22,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic
 {
   var interactor: LoginBusinessLogic?
   var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
+  var userAccount : UserAccount?
 
   // MARK: Object lifecycle
   
@@ -49,9 +49,10 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     viewController.interactor = interactor
     viewController.router = router
     interactor.presenter = presenter
+    interactor.worker = BankAPIWorker()
     presenter.viewController = viewController
     router.viewController = viewController
-    router.dataStore = interactor
+    
   }
   
   // MARK: Routing
@@ -69,24 +70,9 @@ class LoginViewController: UIViewController, LoginDisplayLogic
   // MARK: View lifecycle
     override func viewDidLoad(){
         super.viewDidLoad()
-        doSomething()
   }
   
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = Login.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Login.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
-    
+
     //MARK : ViewController Events and Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -111,15 +97,13 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     }
     
     func storeUserResponseCredentials(viewModel: UserAccount) {
-        
         userAccount = viewModel
-        
+        if let account = userAccount{
+            router?.passAccountBalance(account: account)
+        }
     }
     
-    var userAccount : UserAccount?
-    
-    func showAlert()
-    {
+    func showAlert() {
         let alert = UIAlertController(title: "Alerta", message: "Senha Incorreta!", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)

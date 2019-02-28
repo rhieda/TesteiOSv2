@@ -14,8 +14,7 @@ import UIKit
 
 protocol UserAccountBalanceBusinessLogic
 {
-  func doSomething(request: UserAccountBalance.Something.Request)
-    func loadRegistry(ur: UserResponse)
+    func loadRegistry(id : Int)
 }
 
 protocol UserAccountBalanceDataStore
@@ -25,24 +24,16 @@ protocol UserAccountBalanceDataStore
 
 class UserAccountBalanceInteractor: UserAccountBalanceBusinessLogic, UserAccountBalanceDataStore
 {
-    func loadRegistry(ur: UserResponse) {
+    func loadRegistry(id : Int) {
         worker = BankAPIWorker()
+        worker?.getAccountBalance(id, completionHandler: { (accountBalance) in
+            let accountDetails = accountBalance
+            self.presenter?.presentAccountBalance(response: accountDetails)
+        })
         
     }
     
   var presenter: UserAccountBalancePresentationLogic?
   var worker: BankAPIWorker?
-  //var name: String = ""
   
-  // MARK: Do something
-  
-  func doSomething(request: UserAccountBalance.Something.Request)
-  {
-//    worker = UserAccountBalanceWorker()
-//    worker?.doSomeWork()
-    
-    let response = UserAccountBalance.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
-    
 }

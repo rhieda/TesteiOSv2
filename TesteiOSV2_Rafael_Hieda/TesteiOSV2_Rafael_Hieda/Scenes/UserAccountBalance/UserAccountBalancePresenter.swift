@@ -14,25 +14,18 @@ import UIKit
 
 protocol UserAccountBalancePresentationLogic
 {
-  func presentSomething(response: UserAccountBalance.Something.Response)
   func presentAccountBalance(response : AccountBalance)
 }
 
 class UserAccountBalancePresenter: UserAccountBalancePresentationLogic
 {
   weak var viewController: UserAccountBalanceDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: UserAccountBalance.Something.Response)
-  {
-    let viewModel = UserAccountBalance.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
     
-    func presentAccountBalance(response: AccountBalance)
-    {
-        
+ func presentAccountBalance(response: AccountBalance) {
+        if let registries = response.statementList {
+            viewController!.vm = registries
+            viewController!.displayRegistries()
+        }
     }
     
     
