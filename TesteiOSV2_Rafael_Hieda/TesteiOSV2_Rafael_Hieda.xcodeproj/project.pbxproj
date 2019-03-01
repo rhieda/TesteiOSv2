@@ -13,6 +13,7 @@
 		B6779B11222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B10222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift */; };
 		B6779B1322296EC000B75244 /* LoginPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B1222296EC000B75244 /* LoginPresenterTestCase.swift */; };
 		B6779B15222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B14222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift */; };
+		B6779B18222984D600B75244 /* UserAccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B17222984D600B75244 /* UserAccountBalanceViewController.swift */; };
 		CB3DF4B6F8B318CA0B2F85AE /* Pods_TesteiOSV2_Rafael_Hieda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502A6B6DA1B1C62A8822490F /* Pods_TesteiOSV2_Rafael_Hieda.framework */; };
 		E32FD3CA2187D58500C04054 /* UserAccountBalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C42187D58500C04054 /* UserAccountBalancePresenter.swift */; };
 		E32FD3CE2187D58500C04054 /* UserAccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C82187D58500C04054 /* UserAccountBalanceViewController.swift */; };
@@ -72,6 +73,7 @@
 		B6779B10222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceInteractorTestCase.swift; sourceTree = "<group>"; };
 		B6779B1222296EC000B75244 /* LoginPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTestCase.swift; sourceTree = "<group>"; };
 		B6779B14222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalancePresenterTestCase.swift; sourceTree = "<group>"; };
+		B6779B17222984D600B75244 /* UserAccountBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceViewController.swift; sourceTree = "<group>"; };
 		BA2436C37D206D4D75BC817E /* Pods-TesteiOSV2_Rafael_HiedaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_HiedaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_HiedaUITests/Pods-TesteiOSV2_Rafael_HiedaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF702B1BF33A16B416D38F48 /* Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_HiedaTests/Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2BF7992077FAFB37DB6FEB0 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesteiOSV2_Rafael_HiedaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		B6779B16222984A300B75244 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6779B17222984D600B75244 /* UserAccountBalanceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		E330F8FD2184B0C800CDEA48 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +227,7 @@
 		E330F9202184B0C900CDEA48 /* TesteiOSV2_Rafael_HiedaTests */ = {
 			isa = PBXGroup;
 			children = (
+				B6779B16222984A300B75244 /* ViewController */,
 				B6779B0D2228BC0C00B75244 /* Presenter */,
 				B6779B0C2228BBFE00B75244 /* Interactor */,
 				E330F9522184F9B400CDEA48 /* Workers */,
@@ -585,6 +596,7 @@
 			files = (
 				B6779B15222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift in Sources */,
 				B6779B1322296EC000B75244 /* LoginPresenterTestCase.swift in Sources */,
+				B6779B18222984D600B75244 /* UserAccountBalanceViewController.swift in Sources */,
 				B6779B0F222955B100B75244 /* LoginInteractor.swift in Sources */,
 				E3D0778D21862AFB001206FF /* UserLoginTestCase.swift in Sources */,
 				B6779B11222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift in Sources */,

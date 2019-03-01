@@ -134,7 +134,7 @@ class UserAccountBalanceViewController: UIViewController, UITableViewDataSource,
     }
 }
 
-fileprivate extension String {
+public extension String {
     static func valueToBRL(value : Double) -> String {
        return String(format: "R$ %.02f", value)
     }
