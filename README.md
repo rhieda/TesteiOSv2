@@ -2,7 +2,7 @@
 # Desafio Santander
     Para executar o projeto, abra o arquivo TesteiOSV2_Rafael_Hieda.xcworkspace
     
-    O projeto foi desenvolvido desenvolvido em Xcode 10.1 e iOS 12.1
+    O projeto foi desenvolvido desenvolvido em Xcode 10.1 e roda iOS 11.0
     
     Foi escolhido o XCTest por ser uma ferramenta própria, que está integrada com o xcode e possui documentação acessível facilmente.
     
