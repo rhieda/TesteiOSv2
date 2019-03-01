@@ -14,6 +14,8 @@ class AccountBalance: Mappable {
     var statementList : [Registry]?
     var error : ResponseError?
     
+    public init(){}
+    
     required init?(map: Map) {
     }
     

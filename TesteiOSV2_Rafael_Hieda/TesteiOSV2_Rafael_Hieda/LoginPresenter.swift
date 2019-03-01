@@ -17,16 +17,14 @@ protocol LoginPresentationLogic
     func presentUserData(_ response : UserResponse)
 }
 
-class LoginPresenter: LoginPresentationLogic
-{
-  weak var viewController: LoginDisplayLogic?
+class LoginPresenter: LoginPresentationLogic {
   
-  // MARK: Do something
+    weak var viewController: LoginDisplayLogic?
   
-    func presentUserData(_ response : UserResponse)
-    {
-        if let userAccount = response.userAccount
-        {
+    // MARK: Do something
+  
+    func presentUserData(_ response : UserResponse) {
+        if let userAccount = response.userAccount {
             viewController?.storeUserResponseCredentials(viewModel: userAccount)
         }
     }

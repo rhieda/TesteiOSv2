@@ -20,6 +20,8 @@ class Registry: Mappable {
         
     }
     
+    init(){}
+    
     func mapping(map: Map) {
         title <- map["title"]
         description <- map["desc"]

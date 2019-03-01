@@ -23,7 +23,7 @@ protocol LoginDataStore
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore {
   var presenter: LoginPresentationLogic?
-  var worker: BankAPIWorker?
+  var worker: BankWorkerDataProtocol?
   
   // MARK: Do something
   
@@ -34,11 +34,9 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
             //self.presenter?.presentData(response)
             ur = response
             
-            if ur?.error?.Success() == true
-            {
+            if ur?.error?.Success() == true {
                 print(ur?.userAccount?.name)
-                if let userResponse = ur
-                {
+                if let userResponse = ur {
                     self.presenter?.presentUserData(userResponse)
                 }
             }

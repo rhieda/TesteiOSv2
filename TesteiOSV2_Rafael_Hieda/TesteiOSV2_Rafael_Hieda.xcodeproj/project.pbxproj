@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		428EED0B1BA835E8648EEAAB /* Pods_TesteiOSV2_Rafael_HiedaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD012E677689BBBF07FFA08 /* Pods_TesteiOSV2_Rafael_HiedaUITests.framework */; };
 		6836474E6D100AABABDE3BF5 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF7992077FAFB37DB6FEB0 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework */; };
+		B6779B0F222955B100B75244 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B0E222955B100B75244 /* LoginInteractor.swift */; };
+		B6779B11222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B10222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift */; };
+		B6779B1322296EC000B75244 /* LoginPresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B1222296EC000B75244 /* LoginPresenterTestCase.swift */; };
+		B6779B15222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B14222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift */; };
 		CB3DF4B6F8B318CA0B2F85AE /* Pods_TesteiOSV2_Rafael_Hieda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502A6B6DA1B1C62A8822490F /* Pods_TesteiOSV2_Rafael_Hieda.framework */; };
 		E32FD3CA2187D58500C04054 /* UserAccountBalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C42187D58500C04054 /* UserAccountBalancePresenter.swift */; };
 		E32FD3CE2187D58500C04054 /* UserAccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32FD3C82187D58500C04054 /* UserAccountBalanceViewController.swift */; };
@@ -64,6 +68,10 @@
 		502A6B6DA1B1C62A8822490F /* Pods_TesteiOSV2_Rafael_Hieda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesteiOSV2_Rafael_Hieda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF3759A8620A0065AAB8358 /* Pods-TesteiOSV2_Rafael_HiedaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_HiedaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_HiedaTests/Pods-TesteiOSV2_Rafael_HiedaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		898E7F9775FCDBEB8497718A /* Pods-TesteiOSV2_Rafael_Hieda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_Hieda.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_Hieda/Pods-TesteiOSV2_Rafael_Hieda.release.xcconfig"; sourceTree = "<group>"; };
+		B6779B0E222955B100B75244 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B6779B10222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalanceInteractorTestCase.swift; sourceTree = "<group>"; };
+		B6779B1222296EC000B75244 /* LoginPresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTestCase.swift; sourceTree = "<group>"; };
+		B6779B14222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBalancePresenterTestCase.swift; sourceTree = "<group>"; };
 		BA2436C37D206D4D75BC817E /* Pods-TesteiOSV2_Rafael_HiedaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_HiedaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_HiedaUITests/Pods-TesteiOSV2_Rafael_HiedaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF702B1BF33A16B416D38F48 /* Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TesteiOSV2_Rafael_HiedaTests/Pods-TesteiOSV2_Rafael_HiedaTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2BF7992077FAFB37DB6FEB0 /* Pods_TesteiOSV2_Rafael_HiedaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesteiOSV2_Rafael_HiedaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +154,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B6779B0C2228BBFE00B75244 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B6779B0E222955B100B75244 /* LoginInteractor.swift */,
+				B6779B10222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B6779B0D2228BC0C00B75244 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B6779B1222296EC000B75244 /* LoginPresenterTestCase.swift */,
+				B6779B14222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		E330F8FD2184B0C800CDEA48 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +217,8 @@
 		E330F9202184B0C900CDEA48 /* TesteiOSV2_Rafael_HiedaTests */ = {
 			isa = PBXGroup;
 			children = (
+				B6779B0D2228BC0C00B75244 /* Presenter */,
+				B6779B0C2228BBFE00B75244 /* Interactor */,
 				E330F9522184F9B400CDEA48 /* Workers */,
 				E330F9462184D72900CDEA48 /* Model */,
 				E330F9232184B0C900CDEA48 /* Info.plist */,
@@ -555,7 +583,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6779B15222972BF00B75244 /* UserAccountBalancePresenterTestCase.swift in Sources */,
+				B6779B1322296EC000B75244 /* LoginPresenterTestCase.swift in Sources */,
+				B6779B0F222955B100B75244 /* LoginInteractor.swift in Sources */,
 				E3D0778D21862AFB001206FF /* UserLoginTestCase.swift in Sources */,
+				B6779B11222966CF00B75244 /* UserAccountBalanceInteractorTestCase.swift in Sources */,
 				E330F94D2184E96000CDEA48 /* ResponseErrorTestCase.swift in Sources */,
 				E330F9542184FA1E00CDEA48 /* BankAPIWorkerTestCase.swift in Sources */,
 			);

@@ -9,13 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TesteiOSV2_Rafael_Hieda/LoginPresenter.swift"
-            timestampString = "573080575.900676"
+            filePath = "TesteiOSV2_Rafael_Hieda/Scenes/UserAccountBalance/UserAccountBalanceInteractor.swift"
+            timestampString = "573143227.489857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "presentUserData(_:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "UserAccountBalanceInteractor"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TesteiOSV2_Rafael_HiedaTests/Interactor/UserAccountBalanceInteractorTestCase.swift"
+            timestampString = "573143227.490414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "testInteractorShouldBringDataFromWorkerAndPassToPresenter()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TesteiOSV2_Rafael_Hieda/Scenes/UserAccountBalance/UserAccountBalanceInteractor.swift"
-            timestampString = "573080575.900757"
+            filePath = "TesteiOSV2_Rafael_HiedaTests/Presenter/UserAccountBalancePresenterTestCase.swift"
+            timestampString = "573143227.490464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "loadRegistry(id:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "displayRegistries()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

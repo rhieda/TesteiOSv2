@@ -15,7 +15,7 @@ class ResponseErrorTestCase: XCTestCase {
     var expected : Bool?
     
     override func setUp() {
-        
+        error = ResponseError()
         super.setUp()
     }
     

@@ -57,7 +57,7 @@ class BankAPIWorkerTestCase: XCTestCase {
         
     }
     
-    //não há checagem do lado da API para validação de login e senha invalidas
+//MARK: - não há checagem do lado da API para validação de login e senha invalidas logo mesmo que a logica esteja correta, não conseguimos aplicar os testes.
     
 //    func test_Should_Fail_If_Invalid_Login()
 //    {

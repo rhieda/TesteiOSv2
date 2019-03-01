@@ -14,6 +14,8 @@ public class ResponseError: Mappable {
     public var code : Int?
     public var message : String?
     
+    init() {}
+    
     public required init?(map: Map) {
         
     }

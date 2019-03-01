@@ -25,7 +25,7 @@ protocol UserAccountBalanceDataStore
 class UserAccountBalanceInteractor: UserAccountBalanceBusinessLogic, UserAccountBalanceDataStore
 {
     func loadRegistry(id : Int) {
-        worker = BankAPIWorker()
+        
         worker?.getAccountBalance(id, completionHandler: { (accountBalance) in
             let accountDetails = accountBalance
             self.presenter?.presentAccountBalance(response: accountDetails)
@@ -34,6 +34,6 @@ class UserAccountBalanceInteractor: UserAccountBalanceBusinessLogic, UserAccount
     }
     
   var presenter: UserAccountBalancePresentationLogic?
-  var worker: BankAPIWorker?
+  var worker: BankWorkerDataProtocol? = BankAPIWorker()
   
 }
